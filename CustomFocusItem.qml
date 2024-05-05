@@ -72,7 +72,7 @@ FocusScope {
             }
         }
         Keys.onPressed: (event) => {
-                            textKey.text = "Pressed: " + event.text + ", " + event.count + ", " + event.isAutoRepeat
+                            textKey.text = "Pressed: " + event.text + ", " + event.count + ", " + event.isAutoRepeat // event.isAutoRepeat still doesnt work for WebAssembly!!
                             console.log(control.title, textKey.text)
                         }
         Keys.onReleased: (event) => {
@@ -90,7 +90,7 @@ FocusScope {
             visible: control.activeFocusOnTab
             text: "TAB NAV"
             color: "white"
-            font.pixelSize: 12
+            font.pixelSize: 16
             font.bold: true
         }
 
@@ -101,7 +101,7 @@ FocusScope {
             anchors.top: parent.top
             text: control.label
             color: "white"
-            font.pixelSize: 12
+            font.pixelSize: 16
             font.bold: true
         }
 
